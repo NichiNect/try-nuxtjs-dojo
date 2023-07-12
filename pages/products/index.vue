@@ -8,6 +8,12 @@
   }
 </style>
 
+<script setup>
+  definePageMeta({
+    layout: "products",
+  })
+</script>
+
 <template>
   <div>
     <h2>Products</h2>
