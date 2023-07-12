@@ -14,12 +14,15 @@
   definePageMeta({
     layout: "products"
   })
+
+  // * fetch API single product by id
+  const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`, { key: id })
 </script>
 
 <template>
   <div>
-    <h2>Product Detail for: {{ id }}</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ab consequatur rerum quos, reiciendis dolorum iure nobis ratione est in! Saepe nesciunt pariatur dolor nostrum neque porro fuga soluta ut!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia quaerat quisquam laborum perspiciatis odio, eum alias impedit sint explicabo, veritatis unde laboriosam similique vel ab id aperiam cupiditate optio. Molestias?</p>
+    <h2>Product Detail: {{ product.title }}</h2>
+    <p>{{ product.price }}</p>
+    <p>{{ product.id }}</p>
   </div>
 </template>
