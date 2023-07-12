@@ -9,6 +9,8 @@
 </style>
 
 <script setup>
+import ProductCard from '../../components/ProductCard.vue';
+
   definePageMeta({
     layout: "products",
   })
@@ -22,7 +24,7 @@
     <h2>Products</h2>
     <div class="grid grid-cols-4 gap-4">
       <div v-for="item in products">
-        <NuxtLink :to="`/products/${item.id}`">{{ item.title }}</NuxtLink>
+        <ProductCard :product="item" />
       </div>
     </div>
   </div>
