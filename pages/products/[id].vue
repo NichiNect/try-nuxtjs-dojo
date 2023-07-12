@@ -9,6 +9,8 @@
 </style>
 
 <script setup>
+import ProductDetail from '../../components/ProductDetail.vue';
+
 	const { id } = useRoute().params
 
   definePageMeta({
@@ -21,8 +23,6 @@
 
 <template>
   <div>
-    <h2>Product Detail: {{ product.title }}</h2>
-    <p>{{ product.price }}</p>
-    <p>{{ product.id }}</p>
+    <ProductDetail :product="product" />
   </div>
 </template>
