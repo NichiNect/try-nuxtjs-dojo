@@ -19,6 +19,14 @@ import ProductDetail from '../../components/ProductDetail.vue';
 
   // * fetch API single product by id
   const { data: product } = await useFetch(`https://fakestoreapi.com/products/${id}`, { key: id })
+
+  if (!product.value) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: 'Product not found',
+      fatal: true
+    })
+  }
 </script>
 
 <template>
