@@ -2,6 +2,18 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      title: 'Nuxt Dojo',
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+        }
+      ]
+    }
+  },
+
   modules: [
     '@nuxtjs/tailwindcss'
   ]

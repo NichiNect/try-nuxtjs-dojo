@@ -31,6 +31,10 @@ import ProductDetail from '../../components/ProductDetail.vue';
 
 <template>
   <div>
+    <Head>
+      <Title>Nuxt Dojo | {{ product.title }}</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
     <ProductDetail :product="product" />
   </div>
 </template>

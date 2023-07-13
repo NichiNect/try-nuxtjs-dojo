@@ -15,6 +15,10 @@ import ProductCard from '../../components/ProductCard.vue';
     layout: "products",
   })
 
+  useHead({
+    title: 'Nuxt Dojo - Merch'
+  })
+
   // * fetch API list products
   const { data: products } = await useFetch('https://fakestoreapi.com/products')
 </script>
